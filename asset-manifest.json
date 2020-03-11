@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/office-questions/static/css/main.5f361e03.chunk.css",
+    "main.js": "/office-questions/static/js/main.b7bcd918.chunk.js",
+    "main.js.map": "/office-questions/static/js/main.b7bcd918.chunk.js.map",
+    "runtime-main.js": "/office-questions/static/js/runtime-main.a2b1b154.js",
+    "runtime-main.js.map": "/office-questions/static/js/runtime-main.a2b1b154.js.map",
+    "static/js/2.8346e271.chunk.js": "/office-questions/static/js/2.8346e271.chunk.js",
+    "static/js/2.8346e271.chunk.js.map": "/office-questions/static/js/2.8346e271.chunk.js.map",
+    "index.html": "/office-questions/index.html",
+    "precache-manifest.14b110008c376d2c1273c19760009bdd.js": "/office-questions/precache-manifest.14b110008c376d2c1273c19760009bdd.js",
+    "service-worker.js": "/office-questions/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/office-questions/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8346e271.chunk.js.LICENSE.txt": "/office-questions/static/js/2.8346e271.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/office-questions/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2b1b154.js",
+    "static/js/2.8346e271.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.b7bcd918.chunk.js"
+  ]
+}
