@@ -1,25 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Tabs, Tab } from 'react-bootstrap';
+import { NewQuestion } from './new-question/NewQuestion';
+import { ViewQuestions } from './view-questions/ViewQuestions';
 
 function App() {
+  const saveQuestion = (question) => {
+    const req = window.indexedDB.open('office-trivia', 1);
+
+    req.onsuccess = function (event) {
+      let db = event.target.result;
+
+      const tx = db.transaction('questions', 'readwrite');
+      const store = tx.objectStore('questions');
+      store.add(question);
+    };
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Tabs
+        style={{ marginTop: '20px' }}
+        defaultActiveKey="new-question"
+        id="app-tabs"
+        unmountOnExit
+      >
+        <Tab style={{ marginTop: '20px' }} eventKey="new-question" title="New Question">
+          <NewQuestion onCreate={saveQuestion} />
+        </Tab>
+        <Tab style={{ marginTop: '20px' }} eventKey="questions" title="View Questions">
+          <ViewQuestions />
+        </Tab>
+      </Tabs>
+    </Container>
   );
 }
 

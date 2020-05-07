@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const req = window.indexedDB.open('office-trivia', 1);
+
+req.onupgradeneeded = function(event) {
+  let db = event.target.result;
+
+  if (!db.objectStoreNames.contains('questions')) {
+    db.createObjectStore('questions', { autoIncrement: true });
+  }
+};
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
